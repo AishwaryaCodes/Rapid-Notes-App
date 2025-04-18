@@ -1,6 +1,6 @@
 # Rapid Notes App
 
-Rapid Notes App is a simple note-taking web application built using JavaScript and HTML. It allows users to quickly add, edit, and delete notes. The app also includes a feature to delete all notes at once with a confirmation prompt.
+Rapid-Notes is a simple note-taking web application built using JavaScript, HTML,Node.js, gRPC and SQLite. It allows users to quickly add, edit, and delete notes.
 
 ---
 
@@ -40,36 +40,47 @@ Node.js gRPC Server (note.proto based)
 
 ## Features
 
-- **Add Notes**: Add new notes by typing into a text area and clicking the "Add" button.
-- **Edit Notes**: Edit the content of an existing note by clicking the pencil icon.
-- **Remove Note**: Remove individual notes by clicking the "❌" icon next to the note.
-- **Delete All Notes**: Clear all notes with a single button, with a confirmation prompt to prevent accidental deletion.
+- Add / edit / delete individual notes  
+- "Delete All" notes functionality  
+- Clean & responsive UI  
+- Notes persist using SQLite  
+- gRPC used between server and data layer  
+- CORS-enabled REST API gateway  
 
 ---
 
-## Technologies Used
+## Tech Stack
 
-- **HTML**: Structure of the app.
-- **CSS**: Styling of the app (optional, not included in the provided code).
-- **JavaScript**: Functionality for adding, editing, and deleting notes.
+| Layer       | Tech                          |
+|-------------|-------------------------------|
+| Frontend    | HTML, CSS, JavaScript         |
+| Backend     | Node.js (Express + gRPC)      |
+| Database    | SQLite (Lightweight & fast)   |
+| Protocol    | Protocol Buffers (protobuf)   |
 
 ---
 
 ## Installation
 
-1. Clone this repository to your local machine using the following command:
-    ```bash
-    git clone https://github.com/your-username/rapid-notes-app.git
+Clone this repository to your local machine using the following command:
+
+    ```
+    
+     git clone https://github.com/YOUR-USERNAME/Rapid_Notes_gRPC_SQLite.git
+     
+     cd Rapid_Notes_gRPC_SQLite
+
+    Install dependencies: npm i
+
+    Start the gRPC Note Service: node server.js
+
+    Start the REST API Gateway: node gateway.js
+
+    npx http-server ./client
+
+    open in Browser:  http://127.0.0.1:8080
+
     ```
 
-2. Open `index.html` in a web browser to use the app.
-
-## Usage
-
-1. Type your note in the textarea.
-2. Click the "Add" button to add the note.
-3. Click the pencil icon to edit an existing note.
-4. Click the "❌" icon to remove a note.
-5. Click the "Delete All" button to remove all notes (after confirming).
 
 
