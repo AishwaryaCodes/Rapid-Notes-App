@@ -2,6 +2,23 @@
 
 Rapid Notes App is a simple note-taking web application built using JavaScript and HTML. It allows users to quickly add, edit, and delete notes. The app also includes a feature to delete all notes at once with a confirmation prompt.
 
+---
+
+## Architecture Overview
+```
+Frontend (HTML + JS)
+     |
+     | (REST or WebSocket)
+     v
+Node.js Gateway Server (Express + gRPC client)
+     |
+     | (gRPC)
+     v
+Node.js gRPC Server (note.proto based)
+```
+
+---
+
 ## Features
 
 - **Add Notes**: Add new notes by typing into a text area and clicking the "Add" button.
@@ -9,11 +26,15 @@ Rapid Notes App is a simple note-taking web application built using JavaScript a
 - **Remove Note**: Remove individual notes by clicking the "❌" icon next to the note.
 - **Delete All Notes**: Clear all notes with a single button, with a confirmation prompt to prevent accidental deletion.
 
+---
+
 ## Technologies Used
 
 - **HTML**: Structure of the app.
 - **CSS**: Styling of the app (optional, not included in the provided code).
 - **JavaScript**: Functionality for adding, editing, and deleting notes.
+
+---
 
 ## Installation
 
