@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Proto generated files (optional, if you compile to JS manually)
+*.js.map
+*.pb.js
+*.pb.ts
+
+# Dist or build folders (if used)
+dist/
+build/

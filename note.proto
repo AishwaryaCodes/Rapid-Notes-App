@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package note;  // ✅ REQUIRED for gRPC JS client to work
+
+service NoteService {
+  rpc CreateNote (NoteInput) returns (Note);
+  rpc GetNote (NoteRequest) returns (Note);
+  rpc ListNotes (Empty) returns (NoteList);
+  rpc UpdateNote (Note) returns (NoteResponse);
+  rpc DeleteNote (NoteRequest) returns (NoteResponse);
+}
+
+message Note {
+  string id = 1;
+  string title = 2;
+  string content = 3;
+}
+
+message NoteInput {
+  string title = 1;
+  string content = 2;
+}
+
+message NoteRequest {
+  string id = 1;
+}
+
+message NoteResponse {
+  string message = 1;
+}
+
+message NoteList {
+  repeated Note notes = 1;
+}
+
+message Empty {}
