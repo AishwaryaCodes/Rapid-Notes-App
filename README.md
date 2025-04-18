@@ -17,6 +17,25 @@ Node.js Gateway Server (Express + gRPC client)
 Node.js gRPC Server (note.proto based)
 ```
 
+## File Structure 
+```
+📂 rapid-notes-app/
+├── client/
+│   ├── index.html        Frontend UI
+│   ├── script.js         Logic for interacting with REST API
+│   └── style.css         Styling for notes app
+│
+├── node_modules/         Installed dependencies
+│
+├── .gitignore            Ignoring node_modules, logs, etc.
+├── gateway.js            REST API (calls gRPC server)
+├── note.proto            gRPC service and message definitions
+├── server.js             gRPC server logic (in-memory storage)
+├── package.json          Project metadata and dependencies
+└── package-lock.json     Exact dependency versions
+
+```
+
 ---
 
 ## Features
